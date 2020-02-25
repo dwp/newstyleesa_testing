@@ -29,10 +29,11 @@
               Name
             </dt>
             <dd class="app-check-your-answers__answer">
-              Sarah Philips
+              {{ data['name-details'] }}
+              
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="name.html">
                 Change<span class="govuk-visually-hidden"> first name</span>
               </a>
             </dd>
@@ -43,10 +44,10 @@
               Date of birth
             </dt>
             <dd class="app-check-your-answers__answer">
-              5 January 1978
+              {{ data['dob-details'] }}
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="dateofbirth.html">
                 Change<span class="govuk-visually-hidden"> date of birth</span>
               </a>
             </dd>
@@ -56,10 +57,10 @@
               National Insurance number
             </dt>
             <dd class="app-check-your-answers__answer">
-              QQ 12 34 56 C
+              {{ data['nino-details'] }}
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="nino.html">
                 Change<span class="govuk-visually-hidden"> date of birth</span>
               </a>
             </dd>
@@ -70,12 +71,10 @@
               Home address
             </dt>
             <dd class="app-check-your-answers__answer">
-              72 Guild Street<br>
-              London<br>
-              SE23 6FH
+              {{ data['address-details'] }}
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="address.html">
                 Change<span class="govuk-visually-hidden"> home address</span>
               </a>
             </dd>
@@ -90,7 +89,7 @@
               SE23 6FH
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="address.html">
                 Change<span class="govuk-visually-hidden"> contact address</span>
               </a>
             </dd>
@@ -100,10 +99,10 @@
               Mobile phone number
             </dt>
             <dd class="app-check-your-answers__answer">
-              07700 900457
+              {{ data['mobile-details'] }}
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="telephone.html">
                 Change<span class="govuk-visually-hidden"> contact details</span>
               </a>
             </dd>
@@ -128,7 +127,7 @@
               Started 20 November 2018
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="condition.html">
                 Change<span class="govuk-visually-hidden"> conditions</span>
               </a>
             </dd>
@@ -145,7 +144,7 @@
               020 7946 0809<br>
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="gpsurgery.html">
                 Change<span class="govuk-visually-hidden"> licence period</span>
               </a>
             </dd>
@@ -159,7 +158,7 @@
               More than 6 months<br>
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="severe-condition.html">
                 Change<span class="govuk-visually-hidden"> life expectancy</span>
               </a>
             </dd>
@@ -172,7 +171,7 @@
               No
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="ds1500-report.html">
                 Change
               </a>
             </dd>
@@ -185,7 +184,7 @@
                Yes
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="hospital.html">
                  Change
                </a>
              </dd>
@@ -201,7 +200,7 @@
                 Admitted on 19 December 2018<br>
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="hospital.html">
                   Change
                 </a>
               </dd>
@@ -215,7 +214,7 @@
               Baby due on 14 May 2019<br>
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="pregnant.html">
                 Change<span class="govuk-visually-hidden"> licence period</span>
               </a>
             </dd>
@@ -228,7 +227,7 @@
                Yes
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="consent.html">
                  Change
                </a>
              </dd>
@@ -248,7 +247,7 @@
 
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="voluntary-details.html">
                 Change
               </a>
             </dd>
@@ -265,7 +264,7 @@
               020 7946 0809<br>
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="voluntary-details.html">
                 Change<span class="govuk-visually-hidden"> voluntary work details</span>
               </a>
             </dd>
@@ -278,7 +277,7 @@
               Spend some time helping on the tills and washing clothes before they go on sale.
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="voluntary-work-role.html.html">
                 Change<span class="govuk-visually-hidden"> life expectancy</span>
               </a>
             </dd>
@@ -291,7 +290,7 @@
               1 hour
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="voluntary-hours.html">
                 Change
               </a>
             </dd>
@@ -307,7 +306,7 @@
              No
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="voluntary-work-another.html">
                  Change
                </a>
              </dd>
@@ -326,7 +325,7 @@
                 Yes
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="work.html">
                   Change
                 </a>
               </dd>
@@ -342,7 +341,7 @@
 
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="work-emp-details.html">
                 Remove
               </a>
             </dd>
@@ -362,7 +361,7 @@
                 S10 4JF<br>
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="work-emp-details.html">
                   Change
                 </a>
               </dd>
@@ -375,7 +374,7 @@
                 No
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="worksick.html">
                   Change
                 </a>
               </dd>
@@ -388,7 +387,7 @@
                 Employee
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="work-self-emp.html">
                   Change
                 </a>
               </dd>
@@ -401,7 +400,7 @@
                 7 hours
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="work-hours.html">
                   Change
                 </a>
               </dd>
@@ -414,7 +413,7 @@
                 £124 weekly
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="payfrequency.html">
                   Change
                 </a>
               </dd>
@@ -427,7 +426,7 @@
                 No
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="work-supported.html">
                   Change
                 </a>
               </dd>
@@ -440,7 +439,7 @@
                 Travel and subsistence
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="expenses.html">
                   Change
                 </a>
               </dd>
@@ -517,7 +516,7 @@
             No
             </dd>
             <dd class="app-check-your-answers__change">
-              <a href="#">
+              <a href="work-another.html">
                 Change
               </a>
             </dd>
@@ -538,7 +537,7 @@
                No
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="statutory-pay.html">
                  Change
                </a>
              </dd>
@@ -552,7 +551,7 @@
 
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="statutory-pay-recent.html">
                   Change
                 </a>
               </dd>
@@ -565,7 +564,7 @@
                  18 December 2018
                </dd>
                <dd class="app-check-your-answers__change">
-                 <a href="#">
+                 <a href="statutory-pay-recent-end.html">
                    Change
                  </a>
                </dd>
@@ -578,7 +577,7 @@
                18 January 2019
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="statutory-pay-end.html">
                  Change
                </a>
              </dd>
@@ -591,7 +590,7 @@
                Statutory Maternity Pay
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="statutory-pay-other.html">
                  Change
                </a>
              </dd>
@@ -604,7 +603,7 @@
                18 March 2019
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="fit-for-work.html">
                  Change
                </a>
              </dd>
@@ -622,7 +621,7 @@
             18 January 2019
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="#">
+            <a href="claimdate.html">
               Change<span class="govuk-visually-hidden"> contact details</span>
             </a>
           </dd>
@@ -639,7 +638,7 @@
            Yes
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="#">
+           <a href="work-overseas.html">
              Change<span class="govuk-visually-hidden"> contact details</span>
            </a>
          </dd>
@@ -652,7 +651,7 @@
            Yes
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="#">
+           <a href="military-overseas.html">
              Change<span class="govuk-visually-hidden"> contact details</span>
            </a>
          </dd>
@@ -671,7 +670,7 @@
 
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="">
                  Remove
                </a>
              </dd>
@@ -684,7 +683,7 @@
                Yes
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension.html">
                  Change
                </a>
              </dd>
@@ -704,7 +703,7 @@
                Started 15 July 2018
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension-details.html">
                  Change
                </a>
              </dd>
@@ -717,7 +716,7 @@
                Weekly
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension-frequency.html">
                  Change
                </a>
              </dd>
@@ -730,7 +729,7 @@
                Yes
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension-deductions.html">
                  Change
                </a>
              </dd>
@@ -743,7 +742,7 @@
                £15.30 income tax
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension-amount-deductions.html">
                  Change
                </a>
              </dd>
@@ -756,7 +755,7 @@
                No
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension-inherited.html">
                  Change
                </a>
              </dd>
@@ -772,7 +771,7 @@
              No
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="pension-another.html">
                  Change
                </a>
              </dd>
@@ -792,7 +791,7 @@
 
               </dd>
               <dd class="app-check-your-answers__change">
-                <a href="#">
+                <a href="">
                   Remove
                 </a>
               </dd>
@@ -805,7 +804,7 @@
                Yes
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="insurance.html">
                  Change
                </a>
              </dd>
@@ -824,7 +823,7 @@
                SE23 6FH<br>
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="insurance-detail.html">
                  Change
                </a>
              </dd>
@@ -837,7 +836,7 @@
                I paid less than half of the premiums
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="insurancepremiums.html">
                  Change
                </a>
              </dd>
@@ -850,7 +849,7 @@
                £65 a week
              </dd>
              <dd class="app-check-your-answers__change">
-               <a href="#">
+               <a href="insurance-payment.html">
                  Change
                </a>
              </dd>
@@ -869,7 +868,7 @@
              Yes
            </dd>
            <dd class="app-check-your-answers__change">
-             <a href="#">
+             <a href="consent-outcome.html">
                Change
              </a>
            </dd>

@@ -15,6 +15,9 @@
       What is your National Insurance number?
     </h1>
 
+    <input type="hidden" value="" name="nino-details" id="nino-details-hidden"/>
+
+
     <div class="govuk-form-group">
       <span id="national-insurance-number-hint" class="govuk-hint">
         It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
@@ -22,10 +25,42 @@
       <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
     </div>
 
-    <input type="submit" class="govuk-button" value="Continue" id="submit"><!-- address -->
+    <input type="submit" class="govuk-button" value="Continue" id="formbutton"><!-- address -->
 
     </form>
 
   </div><!-- govuk-grid-column-two-thirds -->
 </div><!-- govuk-grid-row -->
+{% endblock %}
+
+{% block pageScripts %}
+<!--
+  Using jQuery to branch the page flow based on which radio buttons are checked.
+-->
+<script type="text/javascript">
+  $(document).on('ready',function()
+  {
+
+    // grab the existing data from the session (if it is there)
+    var session_data = "{{ data['nino-details'] }}" ;
+    // put it in log
+    console.log(session_data);
+
+
+    // whemn button is clicked
+    $('#formbutton').on('click',function(e)
+    {
+      // don't submit the form
+      e.preventDefault();
+      // grab what was typed into the name box.
+      var nino = $('#national-insurance-number').val();
+      // add that to the existing session data
+      var new_session_data = (session_data) ? session_data : nino ;
+      // put this new data back into the form (hidden)
+      $('#nino-details-hidden').val(new_session_data);
+      // submit the form as usual
+      $("#form").submit();
+    })
+  });
+</script>
 {% endblock %}

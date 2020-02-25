@@ -16,6 +16,8 @@
 
     <form id="form" method="post" action="condition">
 
+      <input type="hidden" value="" name="mobile-details" id="mobile-details-hidden"/>
+
     <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -55,7 +57,7 @@
 
  <!-- form group -->
 <div>
-  <input type="submit" class="govuk-button" value="Continue" id="submit"><!-- backdate -->
+  <input type="submit" class="govuk-button" value="Continue" id="formbutton"><!-- backdate -->
 </div>
 </form>
 </div><!-- govuk-grid-column-two-thirds -->
@@ -93,6 +95,26 @@
       // after we're finished with the above.
       return true;
     });
+
+    // grab the existing data from the session (if it is there)
+    var session_data = "{{ data['mobile-details'] }}" ;
+    // put it in log
+    console.log(session_data);
+
+    // whemn button is clicked
+    $('#formbutton').on('click',function(e)
+    {
+      // don't submit the form
+      e.preventDefault();
+      // grab what was typed into the name box.
+      var mobile = $('#mobile').val();
+      // add that to the existing session data
+      var new_session_data = (session_data) ? session_data : mobile ;
+      // put this new data back into the form (hidden)
+      $('#mobile-details-hidden').val(new_session_data);
+      // submit the form as usual
+      $("#form").submit();
+    })
   });
 </script>
 {% endblock %}

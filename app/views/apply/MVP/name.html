@@ -15,6 +15,8 @@
       What is your name?
     </h1>
 
+    <input type="hidden" value="" name="name-details" id="name-details-hidden"/>
+
     <div class="govuk-form-group">
     <label class="govuk-label" for="first-name">
     First name
@@ -28,10 +30,45 @@
     <input class="govuk-input govuk-input--width-20" id="last-name" name="width-20" type="text">
     </div>
 
-    <input type="submit" class="govuk-button" value="Continue" id="submit"><!-- nino -->
+    <input type="submit" class="govuk-button" value="Continue" id="formbutton"><!-- nino -->
 
     </form>
 
   </div><!-- govuk-grid-column-two-thirds -->
 </div><!-- govuk-grid-row -->
+{% endblock %}
+
+{% block pageScripts %}
+<!--
+  Using jQuery to branch the page flow based on which radio buttons are checked.
+-->
+<script type="text/javascript">
+  $(document).on('ready',function()
+  {
+
+    // grab the existing data from the session (if it is there)
+    var session_data = "{{ data['name-details'] }}" ;
+    // put it in log
+    console.log(session_data);
+
+
+    // whemn button is clicked
+    $('#formbutton').on('click',function(e)
+    {
+      // don't submit the form
+      e.preventDefault();
+      // grab what was typed into the name box.
+      var fullname = $('#first-name').val() + ' ' + $('#last-name').val();
+      // add that to the existing session data
+      var new_session_data = (session_data) ? session_data : fullname ;
+      // put this new data back into the form (hidden)
+      $('#name-details-hidden').val(new_session_data);
+      // submit the form as usual
+      $("#form").submit();
+    })
+  });
+</script>
+
+
+
 {% endblock %}
