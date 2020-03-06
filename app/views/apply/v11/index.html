@@ -1,0 +1,52 @@
+{% extends "layout_master.html" %}
+
+{% block pageTitle %}
+  Prototypes &ndash; {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div style="margin-bottom: 30px;">
+  <a href="../../index.html" rel="prev" class="govuk-back-link">Index page</a>
+</div>
+
+{# <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Prototypes</h1>
+  </div>
+</div> #}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">Version 11</h2>
+
+    <h3 class="govuk-heading-m">Created: 6 March 2020 (work in progress)</h3>
+
+    <p>This is the first version from the Newcastle team. </p>
+
+    <h4 class="govuk-heading-s">Changes</h4>
+
+    <p class="govuk-body">How can we secure access to the private beta service?</p>
+
+    <p class="govuk-body">Currently, the link is:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>shared with users who agree to private beta over the phone</li>
+        <li>shared by email</li>
+        <li>generic and can be accessed by anyone</li>
+    </ul>
+
+    <p class="govuk-body">We are exploring ideas including:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li><a href="private-beta">tempoary screen to explain private beta</a></li>
+        <li>token-ised link</li>
+        <li>whitelisting</li>
+        <li>invitation codes</li>
+    </ul>
+
+
+    
+
+{% endblock %}
